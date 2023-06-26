@@ -6,7 +6,7 @@ import HelloWorld from './components/HelloWorld.vue'
 <template>
   <header>
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+      <img src="assets/logo.svg" class="logo" name="logo" alt="logo" />
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
@@ -34,6 +34,7 @@ nav {
   font-size: 12px;
   text-align: center;
   margin-top: 2rem;
+  display: flex;
 }
 
 nav a.router-link-exact-active {

@@ -15,13 +15,24 @@
 <style scoped>
 .item {
   margin-top: 2rem;
-  display: flex;
+  display: table-cell;
   position: relative;
+  vertical-align: middle;
+  text-align: center;
 }
-
+.item::after{
+  content: '';
+  position:absolute;
+  top: 0px;
+  left: 0px;
+  background: rgba(0,0,0,0.5);
+}
 .details {
   flex: 1;
   margin-left: 1rem;
+  position: relative;
+  color: #FFF;
+  font-size: 1rem;
 }
 
 i {
