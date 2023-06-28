@@ -1,12 +1,13 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
+import SiteLogo from './assets/logo.svg'
 </script>
 
 <template>
   <header>
     <div class="wrapper">
-      <img src="assets/logo.svg" class="logo" name="logo" alt="logo" />
+      <img :src="SiteLogo" class="logo" name="logo" alt="logo" width="40" />
 
       <nav>
         <RouterLink to="/">Home</RouterLink>
@@ -30,10 +31,8 @@ header {
 }
 
 nav {
-  width: 100%;
   font-size: 12px;
   text-align: center;
-  margin-top: 2rem;
   display: flex;
 }
 
@@ -59,7 +58,7 @@ nav a:first-of-type {
   header {
     display: flex;
     place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
+   
   }
 
   .logo {
@@ -68,17 +67,16 @@ nav a:first-of-type {
 
   header .wrapper {
     display: flex;
-    place-items: flex-start;
+    flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
+    flex: 1 1 auto;
+    justify-content: space-between;
   }
 
   nav {
     text-align: left;
-    margin-left: -1rem;
     font-size: 1rem;
-
-    padding: 1rem 0;
-    margin-top: 1rem;
   }
 }
 </style>

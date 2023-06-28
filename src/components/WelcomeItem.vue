@@ -1,4 +1,5 @@
-<template>
+<template >
+  <div class="slider-box">
   <div class="item">
     <i>
       <slot name="icon"></slot>
@@ -10,28 +11,41 @@
       <slot></slot>
     </div>
   </div>
+  </div>
 </template>
 
 <style scoped>
-.item {
+
+.slider-box{
+  background: #e6ffcb;
   margin-top: 2rem;
-  display: table-cell;
+  display: block;
   position: relative;
-  vertical-align: middle;
-  text-align: center;
+  min-height:230px;
 }
-.item::after{
+.item {
+  background: url('../assets/images/banner-bg.webp') ;
+  background-size: contain;
+  display: flex;
+  position: relative;
+  text-align: center;
+  min-height: inherit;
+  place-items: center;
+}
+.item:before{
   content: '';
+  display: block;
   position:absolute;
   top: 0px;
   left: 0px;
-  background: rgba(0,0,0,0.5);
+  background: rgba(230,255,203,0.5);
+  width:100%;
+  min-height:230px;
 }
 .details {
   flex: 1;
-  margin-left: 1rem;
   position: relative;
-  color: #FFF;
+  color: #616161;
   font-size: 1rem;
 }
 
@@ -52,10 +66,9 @@ h3 {
 }
 
 @media (min-width: 1024px) {
-  .item {
+  /* .item {
     margin-top: 0;
-    padding: 0.4rem 0 1rem calc(var(--section-gap) / 2);
-  }
+  } */
 
   i {
     top: calc(50% - 25px);
@@ -68,7 +81,7 @@ h3 {
     height: 50px;
   }
 
-  .item:before {
+  /* .item:before {
     content: ' ';
     border-left: 1px solid var(--color-border);
     position: absolute;
@@ -84,14 +97,14 @@ h3 {
     left: 0;
     top: calc(50% + 25px);
     height: calc(50% - 25px);
-  }
+  } */
 
-  .item:first-of-type:before {
+  /* .item:first-of-type:before {
     display: none;
   }
 
   .item:last-of-type:after {
     display: none;
-  }
+  } */
 }
 </style>
