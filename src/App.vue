@@ -2,6 +2,7 @@
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
 import SiteLogo from './assets/logo.svg'
+import TheFooter from './components/TheFooter.vue'
 </script>
 
 <template>
@@ -13,14 +14,20 @@ import SiteLogo from './assets/logo.svg'
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
         <RouterLink to="/publish-property">Post Property</RouterLink>
+        <a class="userProfileMenu">
+          <img src="./assets/user.png" name="usericon" alt="user" width="20" height="20" />
+          <!-- <nav class="userProfileMenuList">
+            <a href="">Login</a>
+            <a href="">Dashboard</a>
+            <a href="">Property List</a>
+          </nav> -->
+        </a>
       </nav>
     </div>
   </header>
 
   <RouterView />
-  <footer>
-
-  </footer>
+  <TheFooter />
 </template>
 
 <style scoped>
@@ -47,6 +54,7 @@ nav {
   font-size: 12px;
   text-align: center;
   display: flex;
+  place-items: center;
 }
 
 nav a.router-link-exact-active {
@@ -66,9 +74,29 @@ nav a {
 nav a:first-of-type {
   border: 0;
 }
-footer{
-  background:rgba(230,255,203,1);
-  padding: 1rem;
+.userProfileMenu{
+  padding: 10px;
+  background: var(--color-primary);
+  border-radius: 50%;
+  display: flex;
+  place-items: center;
+  position:relative;
+  cursor: pointer;
+}
+.userProfileMenuList{
+  position: absolute;
+  right: 0px;
+  top: 15px;
+  width: 150px;
+  height: 0px;
+  padding: 5px;
+  box-shadow: 1px 1px 10px var(--color-primary);
+  -webkit-box-shadow: 1px 1px 10px var(--color-primary);
+}
+.userProfileMenu:hover > .userProfileMenuList , .userProfileMenu:active > .userProfileMenuList{
+  display: block;
+  height: auto;
+  transition: height ease-in-out 1s;
 }
 @media (min-width: 1024px) {
   header {

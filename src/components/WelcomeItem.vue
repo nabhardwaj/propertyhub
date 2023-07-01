@@ -20,7 +20,7 @@
   background: #e6ffcb;
   display: block;
   position: relative;
-  min-height:60vh;
+  min-height:45vh;
 }
 .item {
   background: url('../assets/images/banner-bg.webp') ;
@@ -37,9 +37,9 @@
   position:absolute;
   top: 0px;
   left: 0px;
-  background: rgba(230,255,203,0.5);
+  background: var(--color-primary);
   width:100%;
-  min-height:60vh;
+  min-height:45vh;
 }
 .details {
   flex: 1;
@@ -61,7 +61,7 @@ h3 {
   font-size: 1.2rem;
   font-weight: 500;
   margin-bottom: 0.4rem;
-  color: var(--color-text);
+  color: var(--color-banner-heading);
 }
 
 @media (min-width: 1024px) {
