@@ -12,22 +12,35 @@ import SiteLogo from './assets/logo.svg'
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
+        <RouterLink to="/publish-property">Post Property</RouterLink>
       </nav>
     </div>
   </header>
 
   <RouterView />
+  <footer>
+
+  </footer>
 </template>
 
 <style scoped>
 header {
   line-height: 1.5;
   max-height: 100vh;
+  padding: 1rem;
 }
 
+header .wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    flex: 1 1 auto;
+    justify-content: space-between;
+  }
 .logo {
   display: block;
-  margin: 0 auto 2rem;
+  margin-right: 2rem;
 }
 
 nav {
@@ -53,7 +66,10 @@ nav a {
 nav a:first-of-type {
   border: 0;
 }
-
+footer{
+  background:rgba(230,255,203,1);
+  padding: 1rem;
+}
 @media (min-width: 1024px) {
   header {
     display: flex;

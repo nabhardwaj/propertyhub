@@ -1,22 +1,27 @@
 <template>
+    <div class="container">
     <div class="listTitle flexRow spaceBetween">
         <h2>{{ title }}</h2>
         <span >View All</span>
     </div>
-    <div class="sliderContainer">
-    <div class="listView flexRow">
-        <div v-for="(d,index) in details" :key="index" class="list mr-r-1">
-            <a class="propLink">
-            <div class="displayPic">              
-                <img :src="imgSrc+d.name+'.'+d.type" :name=d.name :alt=d.name />
+    
+        <div class="sliderContainer">
+            <div class="listView flexRow">
+                <div v-for="(d,index) in details" :key="index" class="list mr-r-1">
+                    <a class="propLink">
+                    <div class="displayPic">              
+                        <!-- <img v-bind:src="`src/assets/images/`+d.name+'.'+d.type" :name=d.name :alt=d.name /> -->
+                        <img :src=d.src :name=d.name :alt=d.name :title=d.name />
+                        
+                    </div>
+                    <div class="detailBox flexRow space-between bg-white">
+                        <span >{{ d.location }}</span>
+                        <span >{{ d.price }}</span>
+                    </div>
+                    </a>
+                </div>
             </div>
-            <div class="detailBox flexRow space-between bg-white">
-                <span >{{ d.location }}</span>
-                <span >{{ d.price }}</span>
-            </div>
-            </a>
         </div>
-    </div>
     </div>
 </template>
 <script >
@@ -35,12 +40,24 @@
     margin-top:2rem;
     margin-bottom:1rem;
     color: var(--color-heading);
+    place-items: baseline;
+}
+.container{
+    padding: 1rem;
 }
 .sliderContainer{
     display: block;
     position: relative;
     width:100%;
     overflow:hidden;
+}
+.listView{
+    padding-bottom:20px;
+    overflow: auto;
+}
+.listView::-webkit-scrollbar{
+    width: 0px;
+    height: 0px;
 }
 .listView .list:last-child{
     margin-right: 0px;

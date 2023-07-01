@@ -3,7 +3,6 @@
 #app {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   flex: 1 1 auto;
   font-weight: normal;
 }
@@ -46,7 +45,6 @@ a,
    #app {
     display: flex;
     flex-direction: column;
-    padding: 2rem;
     flex: 1 1 auto;
   }
 }

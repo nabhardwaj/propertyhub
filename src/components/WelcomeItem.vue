@@ -18,10 +18,9 @@
 
 .slider-box{
   background: #e6ffcb;
-  margin-top: 2rem;
   display: block;
   position: relative;
-  min-height:230px;
+  min-height:60vh;
 }
 .item {
   background: url('../assets/images/banner-bg.webp') ;
@@ -40,7 +39,7 @@
   left: 0px;
   background: rgba(230,255,203,0.5);
   width:100%;
-  min-height:230px;
+  min-height:60vh;
 }
 .details {
   flex: 1;
@@ -62,7 +61,7 @@ h3 {
   font-size: 1.2rem;
   font-weight: 500;
   margin-bottom: 0.4rem;
-  color: var(--color-heading);
+  color: var(--color-text);
 }
 
 @media (min-width: 1024px) {
