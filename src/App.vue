@@ -13,7 +13,7 @@ import TheFooter from './components/TheFooter.vue'
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/publish-property">Post Property</RouterLink>
+        <RouterLink to="/publish-property" class="postPrptyBtn"><span>Post Property</span></RouterLink>
         <a class="userProfileMenu">
           <img src="./assets/user.png" name="usericon" alt="user" width="20" height="20" />
           <!-- <nav class="userProfileMenuList">
@@ -67,12 +67,49 @@ nav a.router-link-exact-active:hover {
 
 nav a {
   display: inline-block;
-  padding: 0 1rem;
+  padding: .5rem 1rem;
   border-left: 1px solid var(--color-border);
 }
 
 nav a:first-of-type {
   border: 0;
+}
+nav a.postPrptyBtn{
+  margin-right: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+nav a.postPrptyBtn span{
+  position: relative;
+}
+nav a.postPrptyBtn:before{
+  content: '';
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    right: 50%;
+    bottom: 50%;
+    border-radius: 8%;
+    -moz-animation: rippleEffect 2s infinite;
+    -webkit-animation: rippleEffect 2s infinite;
+    background: var(--color-primary);
+}
+@-moz-keyframes rippleEffect {
+  0% {top: 50%;left: 50%;right: 50%;bottom: 50%; opacity: 0.0;}
+    50% {opacity: .8;}
+    100% {top: -50%;left: -50%;right: -50%;bottom: -50%; opacity: 0.0;}
+}
+
+@-webkit-keyframes rippleEffect {
+  /* 0% {-webkit-transform: scale(0.1, 0.1); opacity: 0.0;}
+    50% {opacity: 1.0;}
+    100% {-webkit-transform: scale(1.2, 1.2); opacity: 0.0;} */
+    /* 0% {width:.5%; opacity: 0.0;}
+    50% {opacity: .8;}
+    100% {width: 100%; opacity: 0.0;} */
+    0% {top: 50%;left: 50%;right: 50%;bottom: 50%; opacity: 0.0;}
+    50% {opacity: .8;}
+    100% {top: -50%;left: -50%;right: -50%;bottom: -50%; opacity: 0.0;}
 }
 .userProfileMenu{
   padding: 10px;

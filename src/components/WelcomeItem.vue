@@ -38,6 +38,7 @@
   top: 0px;
   left: 0px;
   background: var(--color-primary);
+  opacity: 0.5;
   width:100%;
   min-height:45vh;
 }

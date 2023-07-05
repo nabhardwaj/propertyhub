@@ -1,19 +1,18 @@
 <template>
         <h2 class="footerSectionTitle">{{ title }}</h2>
-        <ul>
-            <RouterLink to="/">Home</RouterLink>
-            <RouterLink to="/about">About</RouterLink>
-            <RouterLink to="/publish-property">Post Property</RouterLink>
-        </ul>
+        <div class="flexColumn">
+            <RouterLink v-for="(li,index) in links" :key=index :to="li.path">{{ li.name }}</RouterLink>
+        </div>
 </template>
 <script>
 export default {
     name: 'TheFooterSection',
-    props: ['details','title'], 
+    props: ['links','title'], 
 }
 </script>
 <style scoped>
     .footerSectionTitle{
+        font-size: 1rem;
         color: var(--color-banner-heading);
         border-bottom:2px solid var(--color-banner-heading);
     }
