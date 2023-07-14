@@ -17,7 +17,7 @@
 </script>
 <style>
     .svg-inline--fa{
-        font-size:2rem;
+        font-size: 1.4rem;
         margin:5px 5px 0px 0px;
         color: rgb(94 94 94);
         cursor: pointer;

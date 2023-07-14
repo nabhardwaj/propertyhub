@@ -1,6 +1,6 @@
 <script>
     import FooterSection from './footer/FooterSection.vue'
-    import FooterSocialMedia from './footer/SocialMedia.vue'
+    import FooterSocialMedia from './footer/socialMedia.vue'
     export default {
         data(){
             return{
@@ -8,11 +8,20 @@
                     {name:'Home',path:'/'},
                     {name:'About',path:'about'},
                     {name:'Contact',path:'/'},
+                    {name:'Support',path:'/'},
+                    {name:'Career',path:'/'},
                     {name:'Post Property',path:'/'},
+                    {name:'Advertise',path:'/'},
                 ],
                 oLinks : [
                     {name:'Terms & Conditions',path:'/'},
-                    {name:'Privacy Policy',path:'/'}
+                    {name:'Privacy Policy',path:'/'},
+                    {name:'FAQ',path:'/'}
+                ],
+                sLinks : [
+                    {name:'Packers & Movers',path:'/'},
+                    {name:'Brokers',path:'/'},
+                    {name:'Legal',path:'/'}
                 ]
             }
         },
@@ -27,6 +36,7 @@
     <footer>
         <div class="footerSec"><FooterSection title="Quick Links" :links="qLinks" /></div>
         <div class="footerSec"><FooterSection title="Other Links" :links="oLinks" /></div>
+        <div class="footerSec"><FooterSection title="Other Services" :links="sLinks" /></div>
         <div class="footerSec"><FooterSocialMedia title="Follow Us"/></div>
     </footer>
 </template>
@@ -42,6 +52,7 @@ footer{
 .footerSec{
     flex: 1 1 auto;
     padding: 1rem;
+    font-size: .80rem;
 }
 @media (max-width: 480px) {
     /* footer{
